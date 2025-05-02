@@ -1,0 +1,18 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Engineer:    Daniele Ricciardelli
+// Design Name: 
+// Module Name: n_mux
+//////////////////////////////////////////////////////////////////////////////////
+
+module mux #(parameter N = 32)
+(
+    input [N-1:0] a, b,
+    input sel,
+    output [N-1:0] y
+);
+
+    assign y = sel ? a : b;
+
+endmodule
+
